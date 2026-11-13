@@ -11,11 +11,6 @@
       "ja": "./locales/ja.json",
       "en": "./locales/en.json"
     },
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0A1A2A"
-    },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.yuchin0809.suinukisonic",
@@ -28,7 +23,17 @@
     "plugins": [
       "expo-audio",
       "expo-localization",
-      "expo-font"
+      "expo-font",
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "backgroundColor": "#0A1A2A",
+          "imageWidth": 160,
+          "resizeMode": "contain"
+        }
+      ]
     ]
   }
 }

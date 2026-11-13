@@ -5,20 +5,18 @@ import Constants from 'expo-constants';
 import { colors, LINKS } from './theme';
 import { useSettings } from './SettingsContext';
 
-export default function SettingsScreen({ onShowWelcome }) {
-  const { settings, update, t } = useSettings();
-  const version = Constants.expoConfig?.version ?? '1.0.0';
-
-  const Row = ({ label, onPress, right, last }) => (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      style={[s.row, !last && s.rowLine]}
-    >
+function Row({ label, onPress, right, last }) {
+  return (
+    <Pressable onPress={onPress} accessibilityRole="button" style={[s.row, !last && s.rowLine]}>
       <Text style={s.rowText}>{label}</Text>
       <Text style={s.rowRight}>{right ?? '›'}</Text>
     </Pressable>
   );
+}
+
+export default function SettingsScreen({ onShowWelcome }) {
+  const { settings, update, t } = useSettings();
+  const version = Constants.expoConfig?.version ?? '1.0.0';
 
   return (
     <ScrollView style={s.wrap} contentContainerStyle={{ paddingBottom: 24 }}>
