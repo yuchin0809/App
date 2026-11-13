@@ -12,6 +12,6 @@ export const colors = {
 };
 
 export const LINKS = {
-  privacy: 'https://yuchin0809.github.io/App/privacy.html',
-  support: 'https://yuchin0809.github.io/App/support.html',
+  privacy: 'https://yuchin0809.github.io/suinuki-sonic-privacy/privacy.html',
+  support: 'https://yuchin0809.github.io/suinuki-sonic-privacy/support.html',
 };
