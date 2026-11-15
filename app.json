@@ -21,7 +21,7 @@
       }
     },
     "plugins": [
-      "expo-audio",
+      ["expo-audio", { "microphonePermission": false }],
       "expo-localization",
       "expo-font",
       "expo-asset",
